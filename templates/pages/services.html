@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Add custom styles for background colors -->
+<style>
+  body { padding-top: 90px; }
+
+  /* Topbar background color */
+  .top-header {
+    background-color: #f0151f; /* red color, change as needed */
+    color: #fff;
+  }
+
+  .top-header a {
+    color: #fff; /* topbar links color */
+  }
+
+  /* Navbar background color */
+  .main-header {
+    background-color: #1c1c1c; /* dark color, change as needed */
+  }
+
+  .main-header .navbar-nav .nav-link {
+    color: #fff; /* navbar links color */
+  }
+
+  .main-header .navbar-nav .nav-link:hover {
+    color: #f0151f; /* hover color */
+  }
+
+  /* Optional: change brand color */
+  .main-header .navbar-brand h2 {
+    color: #f0151f;
+  }
+</style>
+
+<!-- Services Section Start -->
+<section class="services-section py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center">
+        <h1 class="fw-bold">Our <span class="text-danger">Services</span></h1>
+        <p class="text-muted mt-2">We offer a wide range of services to support your car needs.</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm border-0 h-100 text-center p-4">
+          <i class="fa fa-car fa-3x text-danger mb-3"></i>
+          <h5 class="fw-bold">Car Sales</h5>
+          <p class="text-muted">Buy and sell cars easily through our platform.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm border-0 h-100 text-center p-4">
+          <i class="fa fa-wrench fa-3x text-danger mb-3"></i>
+          <h5 class="fw-bold">Car Maintenance</h5>
+          <p class="text-muted">Professional car servicing and maintenance.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm border-0 h-100 text-center p-4">
+          <i class="fa fa-road fa-3x text-danger mb-3"></i>
+          <h5 class="fw-bold">Car Rentals</h5>
+          <p class="text-muted">Rent your favorite cars at affordable prices.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Services Section End -->
+
+
+
+{% endblock %}

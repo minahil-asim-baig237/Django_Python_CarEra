@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Add custom styles for background colors -->
+<style>
+  body { padding-top: 90px; }
+
+  /* Topbar background color */
+  .top-header {
+    background-color: #f0151f; /* red color, change as needed */
+    color: #fff;
+  }
+
+  .top-header a {
+    color: #fff; /* topbar links color */
+  }
+
+  /* Navbar background color */
+  .main-header {
+    background-color: #1c1c1c; /* dark color, change as needed */
+  }
+
+  .main-header .navbar-nav .nav-link {
+    color: #fff; /* navbar links color */
+  }
+
+  .main-header .navbar-nav .nav-link:hover {
+    color: #f0151f; /* hover color */
+  }
+
+  /* Optional: change brand color */
+  .main-header .navbar-brand h2 {
+    color: #f0151f;
+  }
+</style>
+
+<!-- About Section Start -->
+<section class="about-section py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <img src="{% static 'img/car-1.jpg' %}" class="img-fluid rounded" alt="About CarZone">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="fw-bold">About <span class="text-danger">CarZone</span></h2>
+        <p class="mt-3 text-muted">
+          CarZone is the leading platform for buying, selling, and renting cars. 
+          Our mission is to provide a smooth, transparent, and secure experience for all car enthusiasts.
+        </p>
+        <ul class="list-unstyled mt-3">
+          <li><i class="fa fa-check text-danger me-2"></i>Wide selection of cars</li>
+          <li><i class="fa fa-check text-danger me-2"></i>Trusted sellers and buyers</li>
+          <li><i class="fa fa-check text-danger me-2"></i>Excellent customer support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About Section End -->
+{% endblock %}

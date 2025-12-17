@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Sticky Navbar Spacing Fix -->
+<!-- Add custom styles for background colors -->
+<style>
+  body { padding-top: 90px; }
+
+  /* Topbar background color */
+  .top-header {
+    background-color: #f0151f; /* red color, change as needed */
+    color: #fff;
+  }
+
+  .top-header a {
+    color: #fff; /* topbar links color */
+  }
+
+  /* Navbar background color */
+  .main-header {
+    background-color: #1c1c1c; /* dark color, change as needed */
+  }
+
+  .main-header .navbar-nav .nav-link {
+    color: #fff; /* navbar links color */
+  }
+
+  .main-header .navbar-nav .nav-link:hover {
+    color: #f0151f; /* hover color */
+  }
+
+  /* Optional: change brand color */
+  .main-header .navbar-brand h2 {
+    color: #f0151f;
+  }
+</style>
+
+<!-- Contact Section Start -->
+<section class="contact-section py-5 bg-light">
+  <div class="container">
+
+    <!-- Page Title -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center">
+        <h1 class="fw-bold mt-3">
+          Contact <span class="text-danger">Us</span>
+        </h1>
+        <p class="text-muted mt-2">
+          We are here to answer your questions and provide support.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Contact Form -->
+      <div class="col-lg-6">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body p-4 p-md-5">
+            <h4 class="mb-4">Send us a message</h4>
+
+            <form method="post" novalidate>
+              {% csrf_token %}
+
+              <div class="mb-3">
+                <label class="form-label">Your Name</label>
+                <input type="text" class="form-control" name="name" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Your Email</label>
+                <input type="email" class="form-control" name="email" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Subject</label>
+                <input type="text" class="form-control" name="subject" required>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" name="message" rows="5" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-danger">
+                <i class="fa fa-paper-plane me-2"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-6">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body p-4 p-md-5">
+            <h4 class="mb-4">Get in Touch</h4>
+
+            <p><i class="fa fa-map-marker text-danger me-2"></i> 123 Kathal St, Tampa City</p>
+            <p><i class="fa fa-phone text-danger me-2"></i> +55-4XX-634-7071</p>
+            <p><i class="fa fa-envelope text-danger me-2"></i> info@carzone.com</p>
+            <p><i class="fa fa-clock-o text-danger me-2"></i> Mon - Sun: 8:00am – 6:00pm</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Contact Section End -->
+
+
+{% endblock %}

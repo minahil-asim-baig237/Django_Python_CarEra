@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'includes/topbar.html' %}
+{% include 'includes/navbar.html' %}
+<style>
+  body { padding-top: 90px; }
+
+  /* Topbar background color */
+  .top-header {
+    background-color: #f0151f; /* red color, change as needed */
+    color: #fff;
+  }
+
+  .top-header a {
+    color: #fff; /* topbar links color */
+  }
+
+  /* Navbar background color */
+  .main-header {
+    background-color: #1c1c1c; /* dark color, change as needed */
+  }
+
+  .main-header .navbar-nav .nav-link {
+    color: #fff; /* navbar links color */
+  }
+
+  .main-header .navbar-nav .nav-link:hover {
+    color: #f0151f; /* hover color */
+  }
+
+  /* Optional: change brand color */
+  .main-header .navbar-brand h2 {
+    color: #f0151f;
+  }
+</style>
+
+<!-- Cars Listing Section Start -->
+<section class="cars-section py-5 bg-light">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col text-center">
+        <h1 class="fw-bold">Our <span class="text-danger">Cars</span></h1>
+        <p class="text-muted mt-2">Browse through our wide selection of cars for sale and rent.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Car 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm border-0">
+          <img src="{% static 'img/car-1.jpg' %}" class="card-img-top" alt="Lamborghini Huracán">
+          <div class="card-body">
+            <h5 class="card-title">Lamborghini Huracán</h5>
+            <p class="card-text"><i class="fa fa-map-marker me-2"></i>123 Kathal St, Tampa</p>
+            <p class="card-text"><i class="fa fa-tachometer me-2"></i>4,000 km</p>
+            <p class="card-text"><strong>$850.00</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Car 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm border-0">
+          <img src="{% static 'img/car-2.jpg' %}" class="card-img-top" alt="Lexus GS Red Car">
+          <div class="card-body">
+            <h5 class="card-title">Lexus GS Red Car</h5>
+            <p class="card-text"><i class="fa fa-map-marker me-2"></i>123 Kathal St, Tampa</p>
+            <p class="card-text"><i class="fa fa-tachometer me-2"></i>5,000 km</p>
+            <p class="card-text"><strong>$750.00</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Car 3 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm border-0">
+          <img src="{% static 'img/car-3.jpg' %}" class="card-img-top" alt="2015 Porsche Cayenne">
+          <div class="card-body">
+            <h5 class="card-title">2015 Porsche Cayenne</h5>
+            <p class="card-text"><i class="fa fa-map-marker me-2"></i>123 Kathal St, Tampa</p>
+            <p class="card-text"><i class="fa fa-tachometer me-2"></i>6,000 km</p>
+            <p class="card-text"><strong>$820.00</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Car 4 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm border-0">
+          <img src="{% static 'img/car-4.jpg' %}" class="card-img-top" alt="Toyota Corolla">
+          <div class="card-body">
+            <h5 class="card-title">Toyota Corolla</h5>
+            <p class="card-text"><i class="fa fa-map-marker me-2"></i>123 Kathal St, Tampa</p>
+            <p class="card-text"><i class="fa fa-tachometer me-2"></i>4,500 km</p>
+            <p class="card-text"><strong>$640.00</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Car 5 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm border-0">
+          <img src="{% static 'img/car-5.jpg' %}" class="card-img-top" alt="Toyota Prius Specs">
+          <div class="card-body">
+            <h5 class="card-title">Toyota Prius Specs</h5>
+            <p class="card-text"><i class="fa fa-map-marker me-2"></i>123 Kathal St, Tampa</p>
+            <p class="card-text"><i class="fa fa-tachometer me-2"></i>3,800 km</p>
+            <p class="card-text"><strong>$780.00</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Car 6 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm border-0">
+          <img src="{% static 'img/car-6.jpg' %}" class="card-img-top" alt="Audi Q7 2018">
+          <div class="card-body">
+            <h5 class="card-title">Audi Q7 2018</h5>
+            <p class="card-text"><i class="fa fa-map-marker me-2"></i>123 Kathal St, Tampa</p>
+            <p class="card-text"><i class="fa fa-tachometer me-2"></i>5,500 km</p>
+            <p class="card-text"><strong>$975.00</strong></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Cars Listing Section End -->
+
+
+{% endblock %}
