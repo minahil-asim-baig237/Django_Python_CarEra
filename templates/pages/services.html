@@ -8,32 +8,21 @@
   body { padding-top: 90px; }
 
   /* Topbar background color */
-  .top-header {
-    background-color: #f0151f; /* red color, change as needed */
-    color: #fff;
-  }
-
-  .top-header a {
-    color: #fff; /* topbar links color */
-  }
+  .top-header { background-color: #f0151f; color: #fff; }
+  .top-header a { color: #fff; }
 
   /* Navbar background color */
-  .main-header {
-    background-color: #1c1c1c; /* dark color, change as needed */
-  }
+  .main-header { background-color: #1c1c1c; }
+  .main-header .navbar-nav .nav-link { color: #fff; }
+  .main-header .navbar-nav .nav-link:hover { color: #f0151f; }
+  .main-header .navbar-brand h2 { color: #f0151f; }
 
-  .main-header .navbar-nav .nav-link {
-    color: #fff; /* navbar links color */
-  }
+  /* Section headings */
+  .section-title { margin-bottom: 40px; }
 
-  .main-header .navbar-nav .nav-link:hover {
-    color: #f0151f; /* hover color */
-  }
-
-  /* Optional: change brand color */
-  .main-header .navbar-brand h2 {
-    color: #f0151f;
-  }
+  /* FAQ */
+  .faq-item { margin-bottom: 20px; }
+  .faq-item button { width: 100%; text-align: left; font-weight: bold; }
 </style>
 
 <!-- Services Section Start -->
@@ -41,7 +30,7 @@
   <div class="container">
     <div class="row justify-content-center mb-5">
       <div class="col-lg-8 text-center">
-        <h1 class="fw-bold">Our <span class="text-danger">Services</span></h1>
+        <h1 style="margin-top: 30px;" class="fw-bold section-title">Our <span class="text-danger">Services</span></h1>
         <p class="text-muted mt-2">We offer a wide range of services to support your car needs.</p>
       </div>
     </div>
@@ -68,11 +57,80 @@
           <p class="text-muted">Rent your favorite cars at affordable prices.</p>
         </div>
       </div>
+      <!-- Additional Services -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm border-0 h-100 text-center p-4">
+          <i class="fa fa-shield-alt fa-3x text-danger mb-3"></i>
+          <h5 class="fw-bold">Insurance Services</h5>
+          <p class="text-muted">Protect your car with our reliable insurance options.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm border-0 h-100 text-center p-4">
+          <i class="fa fa-map-marked-alt fa-3x text-danger mb-3"></i>
+          <h5 class="fw-bold">Road Assistance</h5>
+          <p class="text-muted">24/7 roadside assistance for emergencies.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 <!-- Services Section End -->
 
+<!-- FAQ Section Start -->
+<section class="faq-section py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center">
+        <h2 class="fw-bold section-title">Frequently Asked <span class="text-danger">Questions</span></h2>
+      </div>
+    </div>
 
+    <div class="accordion" id="faqAccordion">
+      <div class="faq-item">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+          How can I buy a car?
+        </button>
+        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">You can browse our listings and contact sellers directly through the platform.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+          Do you offer car insurance?
+        </button>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Yes, we offer reliable car insurance services tailored to your needs.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+          Can I rent a car for one day?
+        </button>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Absolutely! You can rent a car for any duration starting from one day.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FAQ Section End -->
+
+<!-- Call to Action Section Start -->
+<div class="intro-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-md-8 col-sm-12">
+            <div class="intro-text">
+              <h3>Do You Have Questions ?</h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12">
+            <a href="contact.html" class="btn btn-md">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Call to Action Section End -->
 
 {% endblock %}

@@ -1,38 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
+
 <!-- Add custom styles for background colors -->
 <style>
   body { padding-top: 90px; }
 
   /* Topbar background color */
-  .top-header {
-    background-color: #f0151f; /* red color, change as needed */
-    color: #fff;
-  }
-
-  .top-header a {
-    color: #fff; /* topbar links color */
-  }
+  .top-header { background-color: #f0151f; color: #fff; }
+  .top-header a { color: #fff; }
 
   /* Navbar background color */
-  .main-header {
-    background-color: #1c1c1c; /* dark color, change as needed */
-  }
+  .main-header { background-color: #1c1c1c; }
+  .main-header .navbar-nav .nav-link { color: #fff; }
+  .main-header .navbar-nav .nav-link:hover { color: #f0151f; }
+  .main-header .navbar-brand h2 { color: #f0151f; }
 
-  .main-header .navbar-nav .nav-link {
-    color: #fff; /* navbar links color */
-  }
+  /* Section titles */
+  .section-title { margin-bottom: 40px; }
 
-  .main-header .navbar-nav .nav-link:hover {
-    color: #f0151f; /* hover color */
-  }
-
-  /* Optional: change brand color */
-  .main-header .navbar-brand h2 {
-    color: #f0151f;
-  }
+  /* Team */
+  .team-card { text-align: center; padding: 20px; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+  .team-card img { width: 150px; height: 150px; border-radius: 50%; margin-bottom: 15px; }
 </style>
 
 <!-- About Section Start -->
@@ -58,4 +47,80 @@
   </div>
 </section>
 <!-- About Section End -->
+
+<!-- Mission & Vision Start -->
+<section class="mission-vision-section py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-lg-6">
+        <h3 class="fw-bold text-danger">Our Mission</h3>
+        <p class="text-muted mt-2">
+          To make car buying, selling, and renting easy, trustworthy, and enjoyable for everyone.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <h3 class="fw-bold text-danger">Our Vision</h3>
+        <p class="text-muted mt-2">
+          To become the most reliable and innovative platform for car enthusiasts worldwide.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Mission & Vision End -->
+
+<!-- Team Section Start -->
+<section class="team-section py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center">
+        <h2 class="fw-bold section-title">Meet Our <span class="text-danger">Team</span></h2>
+        <p class="text-muted">A dedicated team of professionals driving CarZone forward.</p>
+      </div>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-3">
+        <div class="team-card">
+          <img src="{% static 'img/avatar/avatar-11.jpg' %}" alt="Team Member">
+          <h5 class="fw-bold">John Doe</h5>
+          <p class="text-muted">CEO & Founder</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="team-card">
+          <img src="{% static 'img/avatar/avatar-10.jpg' %}" alt="Team Member">
+          <h5 class="fw-bold">Jane Smith</h5>
+          <p class="text-muted">Head of Operations</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="team-card">
+          <img src="{% static 'img/avatar/avatar-9.jpg' %}" alt="Team Member">
+          <h5 class="fw-bold">Mike Johnson</h5>
+          <p class="text-muted">Marketing Lead</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Team Section End -->
+
+
+<!-- Call to Action Section Start -->
+<div class="intro-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-md-8 col-sm-12">
+            <div class="intro-text">
+              <h3>Do You Have Questions ?</h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12">
+            <a href="contact.html" class="btn btn-md">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Call to Action Section End -->
 {% endblock %}
